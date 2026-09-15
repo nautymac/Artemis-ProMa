@@ -20,6 +20,12 @@ android {
 
     flavorDimensions.add("root")
 
+    // Which glasses-free 3D panel the build targets. The two need different machinery: a
+    // bonded lenticular lens weaves the eyes into fixed screen columns, which a shader can
+    // do unaided, while Leia's diffractive backlight steers its views from where the
+    // viewer's face is and only Leia's own SDK knows how to drive it.
+    flavorDimensions.add("panel")
+
     buildFeatures {
         buildConfig = true
     }
@@ -60,6 +66,14 @@ android {
             dimension "root"
             buildConfigField "boolean", "ROOT_BUILD", "false"
         }
+
+        // Lenticular panels: the ProMa King, the RED Hydrogen One, and anything else whose
+        // lens is fixed to the glass. Weaving is a static pattern of screen columns that
+        // Stereo3DRenderer's own shader handles, so nothing device-proprietary is needed.
+        lenticular {
+            dimension "panel"
+            buildConfigField "boolean", "LEIA_BUILD", "false"
+        }
     }
 
     compileOptions {
@@ -96,9 +110,9 @@ android {
     buildTypes {
         debug {
             applicationIdSuffix ".noirdebug"
-            resValue "string", "app_label", "Diana"
-            resValue "string", "app_label_root", "Diana (Root)"
-            resValue "string", "app_label_game", "Diana (Game)"
+            resValue "string", "app_label", "Artemis"
+            resValue "string", "app_label_root", "Artemis (Root)"
+            resValue "string", "app_label_game", "Artemis (Game)"
 
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'

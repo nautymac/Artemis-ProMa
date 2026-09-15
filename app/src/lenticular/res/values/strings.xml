@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Wording for the lenticular flavour. On the ProMa the panel has a 3D service of its own
+    that weaves whatever side by side frame it is shown, so the only question the app has to
+    answer is whether the host is already sending side by side or whether it has to make it.
+-->
+<resources>
+
+    <string name="title_render_mode">3D Source</string>
+    <string name="summary_render_mode">What the host is sending. Side by side is shown as it arrives, for the panel to turn into 3D. 2D is made into side by side here by the AI depth model first.</string>
+    <string name="render_mode_2d">Side by Side (host sends 3D)</string>
+    <string name="render_mode_3d_sbs">2D to 3D (AI)</string>
+
+</resources>

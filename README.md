@@ -1,84 +1,80 @@
-# Artemis Android
+# Artemis (ProMa)
 
-Previously named Moonlight Noir
+3D streaming for the ProMa King, based on [Artemis](https://github.com/ClassicOldSong/moonlight-android) (a Moonlight Android fork). Stream your PC and watch it in 3D, glasses on.
 
-An open source client for [Apollo](https://github.com/ClassicOldSong/Apollo)/[Sunshine](https://github.com/LizardByte/Sunshine).
+[한국어](#한국어) · [English](#english)
 
-Artemis Android will allow you to stream your collection of games from your Windows PC to your Android device,
-whether in your own home or over the internet.
+---
 
-Artemis is currently the best fork of Moonlight with loads of optimizations for office usage.
+## 한국어
 
-A more seamless experience with virtual display will be Artemis paired with [Apollo](https://github.com/ClassicOldSong/Apollo).
+패키지 `com.limelight.noirdebug`. ProMa King 등 렌티큘러 3D 패널용입니다. Lume Pad 2·Red Magic용 CNSDK 스트리밍 앱은 별도 저장소 [`Lumelight-3D`](https://github.com/nautymac/Lumelight-3D)에 있습니다.
 
-# Features
+### 핵심 기능
 
-If you switch back to the main stream version, you'll be missing the following awesome features which are very unlikely to be added there:
+**3D Source: 무엇을 3D로 만들지 고릅니다.** 설정 › 비디오 설정 › 3D Settings에서 호스트가 보내는 영상의 종류를 고릅니다.
 
-1. Custom virtual buttons with import and export support.
-2. [Custom resolutions](https://github.com/moonlight-stream/moonlight-android/pull/1349).
-3. Custom bitrates.
-4. [Multiple mouse mode switching](https://github.com/moonlight-stream/moonlight-android/pull/1304) (normal mouse, [multi-touch](https://github.com/moonlight-stream/moonlight-android/pull/1364), touchpad, disabled, local cursor mode).
-5. Optimized virtual gamepad skins and free joystick.
-6. External monitor mode.
-7. Joycon D-pad support.
-8. Simplified performance information display.
-9. [Game back menu](https://github.com/moonlight-stream/moonlight-android/pull/1171).
-10. Custom shortcut commands.
-11. Easy soft keyboard switching.
-12. Portrait mode.
-13. Display on top mode, useful for foldable phones.
-14. [Virtual touchpad space and sensitivity adjustment](https://github.com/moonlight-stream/moonlight-android/issues/1348#issuecomment-2236344729) for playing right-click view games, such as Warcraft.
-15. Force use device's own vibration motor (in case your gamepad's vibration is not effective).
-16. Gamepad debugging page to view gamepad vibration and gyroscope information, as well as Android kernel version information.
-17. Trackpad tap/scrolling support
-18. Natural track pad mode with touch screen
-19. Non-QWERTY keyboard layout support
-20. Quick Meta key with physical BACK button
-21. Frame rate lock fix for some devices
-22. Video scale mode: Fit/Fill/Stretch
-23. View pan/zoom support
-24. Rotate screen in-game
-25. Add option to quit app directly
-26. Samsung DeX scrolling support
-27. Proper click/scroll/right-click for trackpad on generic Android tablet when using local cursor
-28. Virtual Display integration with [Apollo](https://github.com/ClassicOldSong/Apollo)
-29. Server Command integration with [Apollo](https://github.com/ClassicOldSong/Apollo)
-30. Clipboard sync (requires Apollo)
-31. SBS 3D for external Displays (Using AI MiDaS v2 Lite)
+- **Side by Side (host sends 3D)** — PC가 이미 SBS를 보낼 때 그대로 넘기고, ProMa 3D 서비스가 위빙합니다.
+- **2D to 3D (AI)** — 일반 2D 화면을 AI(MiDaS)로 SBS로 만듭니다.
 
-# Disclaimer
+`Side by Side`는 스트림을 손대지 않고 그대로 넘기는 모드라서, 원래 SBS 입력이면 ProMa가 그대로 3D로 보여줍니다. 스트림 중 메뉴의 **Toggle 3D**로 언제든 2D와 3D를 오갈 수 있습니다. **Start Streams in 3D**를 켜면 연결되자마자 3D로 시작합니다.
 
-This is the `go away` version of Moonlight Android.
+- **3D Output = Side-by-Side (3D glasses)** 로 두면 앱이 SBS를 만들고 기기가 렌즈에 맞게 처리합니다.
+- ProMa 말고 다른 렌티큘러 패널을 위해, 앱이 직접 컬럼을 엮는 위빙(2뷰·4뷰)도 들어 있습니다.
+- 비디오 설정에 **3D Settings** 그룹이 따로 있습니다. 해상도·FPS·비트레이트 · 3D Settings · 고급 순서입니다.
+- 커스텀 해상도에 입력한 값이 실제 스트림 해상도로 적용됩니다.
 
-I got kicked from Moonlight and Sunshine's Discord server literally for helping people out.
+### 설치
 
-This is what I got for finding a bug, opened an issue, getting no response, troubleshoot myself, fixed the issue myself, shared it by PR to the main repo hoping my efforts can help someone else during the maintainance gap.
+[Releases](../../releases)에 디버그 서명 APK가 있습니다. 기기에 직접 설치해서 쓰세요.
 
-Yes, I'm going away. Fixes and improvements on this fork are not necessarily be merged to the main repo either. I have also started [a fork of Sunshine called Apollo](https://github.com/ClassicOldSong/Apollo) and will add useful features that will never get merged by the main repo shortly. [Apollo](https://github.com/ClassicOldSong/Apollo) and [Moonlight Noir](https://github.com/ClassicOldSong/moonlight-android) will no longer be compatible with OG Sunshine and OG Moonlight eventually, but they'll work even better with much more carefully designed features.
+### 직접 빌드
 
-The main repo had stayed silent for 5 months, with nobody actually responding to issues, and people are getting totally no help besides the limited FAQ in their Discord server. I tried to answer issues and questions, solve problems within my ablilty but I got kicked out just for helping others.
+필요한 것: JDK 17, Android SDK와 NDK, `git submodule update --init --recursive`. 경로에 공백이 없어야 합니다(NDK 빌드가 처리하지 못합니다).
 
-**PRs for feature improvements are welcomed here unlike the main repo, your ideas are more likely to be appreciated and your efforts are actually being respected. We welcome people who can and willing to share their efforts, helping yourselves and other people in need.**
+```
+./gradlew assembleNonRoot_gameLenticularDebug
+```
 
-**Update**: They have contacted me and apologized for this incident, but the fact it **happened** still motivated me to start my own fork.
+APK는 `app/build/outputs/apk/nonRoot_gameLenticular/debug/`에 나옵니다. CNSDK 등 독점 SDK가 전혀 필요 없어 클론만 하면 바로 빌드됩니다.
 
-## Downloads
-* [Download APK directly](https://github.com/ClassicOldSong/moonlight-android/releases)
-* [Use Obtainium](https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22com.limelight.noir%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2FClassicOldSong%2Fmoonlight-android%22%2C%22author%22%3A%22ClassicOldSong%22%2C%22name%22%3A%22Artemis%22%2C%22additionalSettings%22%3A%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22nonRoot%5C%22%2C%5C%22matchGroutToUse%5C%22%3A%5C%22%241%5C%22%2C%5C%22versionExtractionRegEx%5C%22%3A%5C%22v(.%2B)%5C%22%7D%22%7D) (recommended)
+---
 
-## Building
-* Install Android Studio and the Android NDK
-* Run ‘git submodule update --init --recursive’ from within moonlight-android/
-* In moonlight-android/, create a file called ‘local.properties’. Add an ‘ndk.dir=’ property to the local.properties file and set it equal to your NDK directory.
-* Build the APK using Android Studio or gradle
+## English
 
-## Authors
+Package `com.limelight.noirdebug`. For lenticular 3D panels such as the ProMa King. The CNSDK streaming app for the Lume Pad 2 and Red Magic lives in a separate repository, [`Lumelight-3D`](https://github.com/nautymac/Lumelight-3D).
 
-* [Cameron Gutman](https://github.com/cgutman)  
-* [Diego Waxemberg](https://github.com/dwaxemberg)  
-* [Aaron Neyer](https://github.com/Aaronneyer)  
-* [Andrew Hennessy](https://github.com/yetanothername)
+### Key features
 
-Moonlight is the work of students at [Case Western](http://case.edu) and was
-started as a project at [MHacks](http://mhacks.org).
+**3D Source.** In Settings › Video Settings › 3D Settings, pick what kind of picture the host is sending.
+
+- **Side by Side (host sends 3D)** — passed through as-is; the ProMa 3D service weaves it.
+- **2D to 3D (AI)** — ordinary 2D is turned into SBS with AI (MiDaS).
+
+`Side by Side` leaves the stream untouched, so when it's already SBS, the ProMa shows it in 3D as-is. **Toggle 3D** in the in-stream menu switches between 2D and 3D at any time. With **Start Streams in 3D** on, a stream starts in 3D as soon as it connects.
+
+- With **3D Output = Side-by-Side (3D glasses)**, the app produces SBS and the device handles it for its lens.
+- For other lenticular panels, the app can also weave columns itself (2-view and 4-view).
+- Video Settings has its own **3D Settings** group, in the order Resolution · FPS · Bitrate · 3D Settings · Advanced.
+- A custom resolution you enter is the resolution actually streamed.
+
+### Install
+
+Debug-signed APKs are on the [Releases](../../releases) page. Sideload onto the device.
+
+### Building
+
+You need JDK 17, the Android SDK and NDK, and `git submodule update --init --recursive`. The path must not contain spaces (the NDK build can't handle them).
+
+```
+./gradlew assembleNonRoot_gameLenticularDebug
+```
+
+The APK lands in `app/build/outputs/apk/nonRoot_gameLenticular/debug/`. No proprietary SDK is needed, so a plain clone builds straight away.
+
+---
+
+## Credits · License
+
+- Based on [Artemis](https://github.com/ClassicOldSong/moonlight-android) by ClassicOldSong and [Moonlight](https://github.com/moonlight-stream/moonlight-android). Its original README is in [docs/artemis-upstream-readme.md](docs/artemis-upstream-readme.md).
+- Licensed under GPL-3.0 ([LICENSE.txt](LICENSE.txt)).
