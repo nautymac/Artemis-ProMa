@@ -1,6 +1,6 @@
 # Artemis (ProMa)
 
-3D streaming for the ProMa King, based on [Artemis](https://github.com/ClassicOldSong/moonlight-android) (a Moonlight Android fork). Stream your PC and watch it in 3D, glasses on.
+3D streaming for lenticular 3D tablets, based on [Artemis](https://github.com/ClassicOldSong/moonlight-android) (a Moonlight Android fork). Stream your PC and watch it in 3D, glasses on. Confirmed working on the **IHQ Skyy 3D** and the **ProMa King Tablet**.
 
 [한국어](#한국어) · [English](#english)
 
@@ -8,7 +8,7 @@
 
 ## 한국어
 
-패키지 `com.limelight.noirdebug`. ProMa King 등 렌티큘러 3D 패널용입니다. Lume Pad 2·Red Magic용 CNSDK 스트리밍 앱은 별도 저장소 [`Lumelight-3D`](https://github.com/nautymac/Lumelight-3D)에 있습니다.
+패키지 `com.limelight.noirdebug`. **IHQ Skyy 3D**, **ProMa King Tablet** 등 렌티큘러 3D 패널용입니다. Lume Pad 2·Red Magic용 CNSDK 스트리밍 앱은 별도 저장소 [`Lumelight-3D`](https://github.com/nautymac/Lumelight-3D)에 있습니다.
 
 ### 핵심 기능
 
@@ -42,7 +42,7 @@ APK는 `app/build/outputs/apk/nonRoot_gameLenticular/debug/`에 나옵니다. CN
 
 ## English
 
-Package `com.limelight.noirdebug`. For lenticular 3D panels such as the ProMa King. The CNSDK streaming app for the Lume Pad 2 and Red Magic lives in a separate repository, [`Lumelight-3D`](https://github.com/nautymac/Lumelight-3D).
+Package `com.limelight.noirdebug`. For lenticular 3D panels — **IHQ Skyy 3D**, **ProMa King Tablet**, and others. The CNSDK streaming app for the Lume Pad 2 and Red Magic lives in a separate repository, [`Lumelight-3D`](https://github.com/nautymac/Lumelight-3D).
 
 ### Key features
 

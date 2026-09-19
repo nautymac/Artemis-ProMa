@@ -4,7 +4,7 @@
 
 ## 한국어
 
-PC 화면을 스트리밍해서 **ProMa King에서 3D 안경을 끼고** 보는 앱.
+PC 화면을 스트리밍해서 **3D 안경을 끼고** 보는 앱. **IHQ Skyy 3D**와 **ProMa King Tablet**, 두 기기에서 확인됨.
 
 ### PC가 보내는 영상을 3D로 만드는 두 가지 방법
 
@@ -22,7 +22,7 @@ PC 화면을 스트리밍해서 **ProMa King에서 3D 안경을 끼고** 보는 
 
 ### 다른 렌티큘러 패널도 지원
 
-ProMa 전용 기능(Side-by-Side (3D glasses))과 별개로, 앱이 직접 화면을 엮어 짜는 위빙 기능도 들어 있다(2뷰·4뷰). ProMa가 아닌 다른 렌티큘러 3D 패널에서도 쓸 수 있다.
+확인된 두 기기용 기능(Side-by-Side (3D glasses))과 별개로, 앱이 직접 화면을 엮어 짜는 위빙 기능도 들어 있다(2뷰·4뷰). 그 밖의 다른 렌티큘러 3D 패널에서도 쓸 수 있다.
 
 ### 설정이 정리돼 있다
 
@@ -32,7 +32,7 @@ ProMa 전용 기능(Side-by-Side (3D glasses))과 별개로, 앱이 직접 화�
 
 ## English
 
-Stream your PC and watch it on a **ProMa King with 3D glasses**.
+Stream your PC and watch it with **3D glasses**. Confirmed working on two devices: **IHQ Skyy 3D** and **ProMa King Tablet**.
 
 ### Two ways to turn what the PC sends into 3D
 
@@ -50,7 +50,7 @@ Pick one in Settings › Video Settings › 3D Settings › **3D Source**.
 
 ### Also works on other lenticular panels
 
-Alongside the ProMa-specific mode (Side-by-Side (3D glasses)), the app can also weave the picture itself into columns (2-view and 4-view) — useful for lenticular 3D panels other than the ProMa.
+Alongside the mode used by the two confirmed devices (Side-by-Side (3D glasses)), the app can also weave the picture itself into columns (2-view and 4-view) — useful for other lenticular 3D panels.
 
 ### Settings kept tidy
 
