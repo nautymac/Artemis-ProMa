@@ -19,6 +19,10 @@
 
 `Side by Side`는 스트림을 손대지 않고 그대로 넘기는 모드라서, 원래 SBS 입력이면 ProMa가 그대로 3D로 보여줍니다. 스트림 중 메뉴의 **Toggle 3D**로 언제든 2D와 3D를 오갈 수 있습니다. **Start Streams in 3D**를 켜면 연결되자마자 3D로 시작합니다.
 
+> [!IMPORTANT]
+> **세 손가락으로 1초 길게 누르면 3D가 켜지고 꺼집니다.** 단, 기본 터치 모드(멀티터치)에서는 설정 › 입력 설정 › **Enable multi-touch gestures**를 켜야 동작합니다. 꺼져 있으면 세 손가락이 PC 터치로 그대로 넘어갑니다. 트랙패드·마우스 모드에서는 설정 없이 동작합니다.
+> 이 설정을 켜면 세 손가락 탭(키보드), 네 손가락 탭(전체 키보드), 다섯 손가락 탭(메뉴)도 앱이 가로챕니다.
+
 - **3D Output = Side-by-Side (3D glasses)** 로 두면 앱이 SBS를 만들고 기기가 렌즈에 맞게 처리합니다.
 - ProMa 말고 다른 렌티큘러 패널을 위해, 앱이 직접 컬럼을 엮는 위빙(2뷰·4뷰)도 들어 있습니다.
 - 비디오 설정에 **3D Settings** 그룹이 따로 있습니다. 해상도·FPS·비트레이트 · 3D Settings · 고급 순서입니다.
@@ -52,6 +56,10 @@ Package `com.limelight.noirdebug`. For lenticular 3D panels — **IHQ Skyy 3D**,
 - **2D to 3D (AI)** — ordinary 2D is turned into SBS with AI (MiDaS).
 
 `Side by Side` leaves the stream untouched, so when it's already SBS, the ProMa shows it in 3D as-is. **Toggle 3D** in the in-stream menu switches between 2D and 3D at any time. With **Start Streams in 3D** on, a stream starts in 3D as soon as it connects.
+
+> [!IMPORTANT]
+> **Hold three fingers for 1 second to toggle 3D on and off.** In the default touch mode (multi-touch) this only works with Settings › Input Settings › **Enable multi-touch gestures** turned on; otherwise the three fingers go straight to the PC as touches. Trackpad and mouse modes need no setting.
+> With that setting on, the app also takes three-finger taps (keyboard), four-finger taps (full keyboard) and five-finger taps (menu).
 
 - With **3D Output = Side-by-Side (3D glasses)**, the app produces SBS and the device handles it for its lens.
 - For other lenticular panels, the app can also weave columns itself (2-view and 4-view).
